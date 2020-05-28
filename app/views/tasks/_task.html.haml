@@ -1,0 +1,8 @@
+.each__disply{data: {task: {id: task.id}}}
+  .comenter
+    .comenter--username
+      = task.user.name
+  .message
+    - if task.content.present?
+      %p.messages
+        = task.content

@@ -52,6 +52,7 @@
     }
   }
 }
+
 .main {
   height: 100%;
   width: calc(100vw - 300px);
@@ -126,7 +127,7 @@
   &__message {
     background-color: #50a3a2;
     padding: 0 40px; 
-    .new_message {
+    .new_task {
       height: 90px;
       width: 100%;
       display: flex;
