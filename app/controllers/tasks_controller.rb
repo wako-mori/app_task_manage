@@ -2,8 +2,11 @@ class TasksController < ApplicationController
   before_action :set_group
 
   def index
-    @task = Task.new
     @tasks = @group.tasks.includes(:user)
+  end
+
+  def new
+    @task = Task.new
   end
 
   def create
@@ -15,6 +18,15 @@ class TasksController < ApplicationController
       flash.now[:alert] = 'タスク名を入力してください'
       render :index
     end
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   private
