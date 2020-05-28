@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+<!-- URL: -->
+日々のタスクや、プロジェクト毎のタスクなど、やるべきことを明確にしミッション達成や
+自分自身の成長に繋げていきます。
 
-Things you may want to cover:
+<!-- ## テストアカウント
+こちらをご使用ください。
+・メールアドレス
 
-* Ruby version
+・パスワード -->
 
-* System dependencies
+## 作成期間
+・2020/5/27 本リポジトリ作成
+・2020/ 各機能実装完了後、デプロイ
+・バージョンアップを継続
 
-* Configuration
+## 仕様
+・macOS Mojava 10.14.6
+・bootstrap 4
+・Rails 5.0.7.2
+・ruby 2.5.1
 
-* Database creation
+## おもな機能
+### ユーザー
+・ユーザー登録、ログイン、ログアウト
+・ユーザーは同じ名前で登録できない
 
-* Database initialization
+### グループ
+・グループの登録
+・ユーザーの追加削除
 
-* How to run the test suite
+### タスク
+・作成、編集、削除
+・タスク名が空白の場合は登録できない
+・期日、担当者を登録できる
 
-* Services (job queues, cache servers, search engines, etc.)
+## 今後実装したいこと
+・カレンダーに表示
+・タスクの並び替え
 
-* Deployment instructions
-
-* ...
+現在、投稿順に表示されるようになっていますが、優先順にタスクの表示順を変更するようにしていきたいです。
