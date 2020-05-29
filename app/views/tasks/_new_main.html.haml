@@ -10,7 +10,7 @@
     .edit--btn
       =link_to 'Edit', edit_group_path(@group) 
   .new__disply
-  = form_for @task do |f|
+  = form_for @task, url: group_tasks_path do |f|
     .new__disply--content--title
       タスク名
       %span.require 必須
