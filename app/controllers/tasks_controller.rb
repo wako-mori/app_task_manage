@@ -11,10 +11,11 @@ class TasksController < ApplicationController
 
   def create
     @task = @group.tasks.new(task_params)
-    if @task.save
+    if @task.valid?
+      @task.save
       redirect_to group_tasks_path(@group), notice: 'タスクが追加されました'
     else
-      @taskus = @group.tasks.includes(:user)
+      @tasks = @group.tasks.includes(:user)
       flash.now[:alert] = 'タスク名を入力してください'
       render :index
     end
