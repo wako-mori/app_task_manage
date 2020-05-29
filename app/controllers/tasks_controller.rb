@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_group
+  before_action :set_task, only: [:update]
 
   def index
     @tasks = @group.tasks.includes(:user)
@@ -25,6 +26,13 @@ class TasksController < ApplicationController
   end
 
   def update
+    @task.update(item_params)
+    if @task.valid?
+      @task.save
+    else
+      flash.now[:alert] = 'タスク名を入力してください'
+      render :index
+    end
   end
 
   def destroy
@@ -38,5 +46,9 @@ class TasksController < ApplicationController
 
   def set_group
     @group = Group.find(params[:group_id])
+  end
+
+  def set_task
+    @task = Task.find(params[id])
   end
 end
