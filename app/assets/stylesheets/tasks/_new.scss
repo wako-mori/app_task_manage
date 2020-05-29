@@ -1,0 +1,135 @@
+.new__disply {
+  margin: 20px 10%;
+  position: relative;
+  width: 60%;
+  &--content--title {
+    margin-bottom: 10px;
+    left: 0;
+    color: $text_color;
+    span {
+      padding: 0 4px;
+        margin-left: 8px;
+        color: $white;
+        font-size: 12px;
+        border-radius: 2px;
+        background-color: $base_color;
+    }
+  }
+  &--content--input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid $line_color;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  &--explanation--title {
+    margin-bottom: 10px;
+    color: $text_color;
+  }
+  &--explanation--input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid $line_color;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  &--limit--title {
+    margin-bottom: 10px;
+    color: $text_color;
+  }
+  .year {
+    height: 30px;
+    width: 20%;
+    -webkit-appearance:none;
+    padding: 0 10px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid $line_color;
+    border-radius: 4px;
+    color: $text_color;
+  }
+  .month {
+    height: 30px;
+    width: 20%;
+    -webkit-appearance:none;
+    padding: 0 10px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid$line_color;
+    border-radius: 4px;
+    color: $text_color;
+  }
+  .day {
+    height: 30px;
+    width: 20%;
+    -webkit-appearance:none;
+    padding: 0 10px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    border: 1px solid $line_color;
+    border-radius: 4px;
+    color: $text_color;
+  }
+
+  &--execution--title {
+    margin: 20px 0;
+    display: flex;
+    color: $text_color;
+    .check_box {
+      margin: 5px 20px;
+    }
+  }
+
+  input.commit-btn {
+    margin: 0 40%;
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1.4em;
+    text-decoration: none;
+    background: $base_color;/*ボタン色*/
+    color: $white;
+    border-bottom: solid 5px #123158;/*ボタン色より暗めに*/
+    border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+  }
+  input.commit-btn:before {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-width: 0 6px 6px 0px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: $white;
+    }
+  input.commit-btn:after {
+    content: " ";
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border-width: 0px 6px 6px 0px;
+    border-style: solid;
+    border-color: $white;
+    border-bottom-color: transparent;
+  }
+  input.commit-btn:active {
+    /*ボタンを押したとき*/
+    border:none;
+    -webkit-transform: translate(6px,6px);
+    transform: translate(6px,6px);
+  }
+  input.commit-btn:active:after, input.commit-btnt:active:before {
+    content: none;/*ボタンを押すと線が消える*/
+  }
+}
