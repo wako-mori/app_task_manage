@@ -26,9 +26,10 @@ class TasksController < ApplicationController
   end
 
   def update
-    @tasks = @group.tasks.update(task_params)
-    if @tasks.valid?
-      @tasks.save
+    @task.update(task_params)
+    if @task.valid?
+      @task.save
+      redirect_to group_tasks_path(@group), notice: 'タスクが変更されました'
     else
       flash.now[:alert] = 'タスク名を入力してください'
       render :index
