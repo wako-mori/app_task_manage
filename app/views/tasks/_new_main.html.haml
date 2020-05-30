@@ -26,5 +26,9 @@
     .new__disply--execution--title
       完了チェック
       = check_box :task, :execution, {class: "check_box"}, true, false
-    .new__disply--commit
-    = f.submit "登録", class:"commit-btn"
+    .btn
+      .new__disply--commit
+      = f.submit "登録", class:"commit-btn"
+      .new__disply--delete
+      = link_to group_task_path, method: "delete", class: "delete-btn" do
+        削除

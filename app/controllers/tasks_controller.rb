@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_group
-  before_action :set_task, only: [:edit, :update]
+  before_action :set_task, only: [:edit, :update, :destroy]
 
   def index
     @tasks = @group.tasks.includes(:user)
@@ -37,6 +37,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @task.destroy
+    redirect_to group_tasks_path(@group)
   end
 
   private
