@@ -10,28 +10,25 @@
     .edit--btn
       =link_to 'Edit', edit_group_path(@group) 
   .new__disply
-    - if task.content.blank?
-      = form_for @task, url: group_tasks_path do |f|
-    - else
-      = form_for @task, url: edit_group_task_path do |f|
-        .new__disply--content--title
-          タスク名
-          %span.require 必須
-        .input
-        = f.text_field :content, {class: "new__disply--content--input", placeholder: "40文字まで"}
-        .new__disply--explanation--title
-          タスクの説明
-        .input
-        = f.text_area :explanation, {class: "new__disply--explanation--input", placeholder: "タスクの説明\n(必須 1,000文字以内)"}
-        .new__disply--limit--title
-          期限
-        .input
-        =raw sprintf(f.date_select(:limit, with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:(Time.now.year + 5), date_separator:'%s'),'年','月')+'日'
-        -# = icon("fa", "check", class: "main__box__bottom__content__group3__box__barthday__icon1")
-        -# = icon("fa", "check", class: "main__box__bottom__content__group3__box__barthday__icon2")
-        -# = icon("fa", "check", class: "main__box__bottom__content__group3__box__barthday__icon3")
-        .new__disply--execution--title
-          完了チェック
-          = check_box :task, :execution, {class: "check_box"}, true, false
-        .new__disply--commit
-        %input{type: "submit", value: "登録", class:"commit-btn"}
+    = form_for @task, url: new_group_task_path do |f|
+      .new__disply--content--title
+        タスク名
+        %span.require 必須
+      .input
+      = f.text_field :content, {class: "new__disply--content--input", placeholder: "40文字まで"}
+      .new__disply--explanation--title
+        タスクの説明
+      .input
+      = f.text_area :explanation, {class: "new__disply--explanation--input", placeholder: "タスクの説明\n(必須 1,000文字以内)"}
+      .new__disply--limit--title
+        期限
+      .input
+      =raw sprintf(f.date_select(:limit, with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:(Time.now.year + 5), date_separator:'%s'),'年','月')+'日'
+      -# = icon("fa", "check", class: "main__box__bottom__content__group3__box__barthday__icon1")
+      -# = icon("fa", "check", class: "main__box__bottom__content__group3__box__barthday__icon2")
+      -# = icon("fa", "check", class: "main__box__bottom__content__group3__box__barthday__icon3")
+      .new__disply--execution--title
+        完了チェック
+        = check_box :task, :execution, {class: "check_box"}, true, false
+      .new__disply--commit
+      %input{type: "submit", value: "登録", class:"commit-btn"}
