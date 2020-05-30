@@ -1,3 +1,4 @@
 .wrapper
   = render "side_bar"
-  = render "new_main"
+  = form_for @task, url: group_tasks_path do |f|
+    = render partial: "new_main", locals: {f: f}

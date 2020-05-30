@@ -1,5 +1,7 @@
 .each__disply{data: {task: {id: task.id}}}
   .message
     - if task.content.present?
-      %p.messages
-        = task.content
+      %p.list__tasks
+        = link_to edit_group_task_path(@group, task.id), class: "messages_text" do
+          .list__details
+            = task.content
