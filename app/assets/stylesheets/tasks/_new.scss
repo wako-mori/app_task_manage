@@ -88,48 +88,95 @@
     }
   }
 
-  input.commit-btn {
-    margin: 0 40%;
-    display: inline-block;
-    position: relative;
-    padding: 0.5em 1.4em;
-    text-decoration: none;
-    background: $base_color;/*ボタン色*/
-    color: $white;
-    border-bottom: solid 5px #123158;/*ボタン色より暗めに*/
-    border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
-  }
-  input.commit-btn:before {
-    content: " ";
-    position: absolute;
-    bottom: -5px;
-    left: -1px;
-    width: 0;
-    height: 0;
-    border-width: 0 6px 6px 0px;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom-color: $white;
+  .btn {
+    display: flex;
+    // margin: 0 40%;
+    input.commit-btn {
+      display: inline-block;
+      position: relative;
+      padding: 0.5em 1.4em;
+      text-decoration: none;
+      background: $base_color;/*ボタン色*/
+      color: $white;
+      border-bottom: solid 5px #123158;/*ボタン色より暗めに*/
+      border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
     }
-  input.commit-btn:after {
-    content: " ";
-    position: absolute;
-    top: -1px;
-    right: -5px;
-    width: 0;
-    height: 0;
-    border-width: 0px 6px 6px 0px;
-    border-style: solid;
-    border-color: $white;
-    border-bottom-color: transparent;
-  }
-  input.commit-btn:active {
-    /*ボタンを押したとき*/
-    border:none;
-    -webkit-transform: translate(6px,6px);
-    transform: translate(6px,6px);
-  }
-  input.commit-btn:active:after, input.commit-btnt:active:before {
-    content: none;/*ボタンを押すと線が消える*/
+    input.commit-btn:before {
+      content: " ";
+      position: absolute;
+      bottom: -5px;
+      left: -1px;
+      width: 0;
+      height: 0;
+      border-width: 0 6px 6px 0px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: $white;
+      }
+    input.commit-btn:after {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      right: -5px;
+      width: 0;
+      height: 0;
+      border-width: 0px 6px 6px 0px;
+      border-style: solid;
+      border-color: $white;
+      border-bottom-color: transparent;
+    }
+    input.commit-btn:active {
+      /*ボタンを押したとき*/
+      border:none;
+      -webkit-transform: translate(6px,6px);
+      transform: translate(6px,6px);
+    }
+    input.commit-btn:active:after, input.commit-btnt:active:before {
+      content: none;/*ボタンを押すと線が消える*/
+    }
+
+    a.delete-btn {
+      display: inline-block;
+      position: relative;
+      padding: 0.5em 1.4em;
+      text-decoration: none;
+      background: $light_gray;/*ボタン色*/
+      color: $white;
+      border-bottom: solid 5px #123158;/*ボタン色より暗めに*/
+      border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+    }
+    a.delete-btn:before {
+      content: " ";
+      position: absolute;
+      bottom: -5px;
+      left: -1px;
+      width: 0;
+      height: 0;
+      border-width: 0 6px 6px 0px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: $white;
+      }
+    a.delete-btn:after {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      right: -5px;
+      width: 0;
+      height: 0;
+      border-width: 0px 6px 6px 0px;
+      border-style: solid;
+      border-color: $white;
+      border-bottom-color: transparent;
+    }
+    a.delete-btn:active {
+      /*ボタンを押したとき*/
+      border:none;
+      -webkit-transform: translate(6px,6px);
+      transform: translate(6px,6px);
+    }
+    a.delete-btn:active:after, a.delete-btn:active:before {
+      content: none;/*ボタンを押すと線が消える*/
+    }
   }
 }

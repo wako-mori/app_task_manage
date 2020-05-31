@@ -108,51 +108,50 @@
       margin-bottom: 11px;
     }
   }
-  // &__message {
-  //   background-color: #50a3a2;
-  //   padding: 0 40px; 
-  //   .new_task {
-  //     height: 90px;
-  //     width: 100%;
-  //     display: flex;
-  //     justify-content: space-between;
-  //     position: relative;
-  //     .main__message--box {
-  //         height: 50px;
-  //         width: 100%;
-  //         background-color: white;
-  //         padding-left: 10px;
-  //         margin: 20px 0 20px 0;
-  //         line-height: 90px;
-  //         border: solid 0px;
-  //       }
-  //     .icon {
-  //       position: absolute;
-  //       right: 110px;
-  //       margin-right: 10px;
-  //       line-height: 90px;
-  //       input {
-  //         display: none;
-  //       }
-  //     }
-  //   }
-  // }
   .task--btn {
-    height: 38px;
-    width: 100px;
-    border: solid 1px $base_color;
     margin: 28px 40px;
-    position: relative;
-    background-color: $base_color;
-
-    a {
-      font-size: 16px;
-      padding: 0 15px;
+    a.add-btn {
+      display: inline-block;
+      position: relative;
+      padding: 0.5em 1.4em;
       text-decoration: none;
-      text-align: center;
-      line-height: 40px;
+      background: $base_color;/*ボタン色*/
       color: $white;
-      border-color: $base_color;
+      border-bottom: solid 5px #123158;/*ボタン色より暗めに*/
+      border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
+    }
+    a.add-btn:before {
+      content: " ";
+      position: absolute;
+      bottom: -5px;
+      left: -1px;
+      width: 0;
+      height: 0;
+      border-width: 0 6px 6px 0px;
+      border-style: solid;
+      border-color: transparent;
+      border-bottom-color: $white;
+      }
+      a.add-btn:after {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      right: -5px;
+      width: 0;
+      height: 0;
+      border-width: 0px 6px 6px 0px;
+      border-style: solid;
+      border-color: $white;
+      border-bottom-color: transparent;
+    }
+    a.add-btn:active {
+      /*ボタンを押したとき*/
+      border:none;
+      -webkit-transform: translate(6px,6px);
+      transform: translate(6px,6px);
+    }
+    a.add-btn:active:after, a.add-btn:active:before {
+      content: none;/*ボタンを押すと線が消える*/
     }
   }
 }
