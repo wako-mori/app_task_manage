@@ -140,42 +140,42 @@
       position: relative;
       padding: 0.5em 1.4em;
       text-decoration: none;
-      background: $base_color;/*ボタン色*/
+      background: $light_gray;/*ボタン色*/
       color: $white;
       border-bottom: solid 5px #123158;/*ボタン色より暗めに*/
       border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
     }
-    a.delete-btn {
-      // content: " ";
-      // position: absolute;
+    a.delete-btn:before {
+      content: " ";
+      position: absolute;
       bottom: -5px;
       left: -1px;
-      // width: 0;
-      // height: 0;
+      width: 0;
+      height: 0;
       border-width: 0 6px 6px 0px;
       border-style: solid;
       border-color: transparent;
       border-bottom-color: $white;
       }
-      a.delete-btn {
-      // content: " ";
-      // position: absolute;
-      top: -5px;
+    a.delete-btn:after {
+      content: " ";
+      position: absolute;
+      top: -1px;
       right: -5px;
-      // width: 0;
-      // height: 0;
+      width: 0;
+      height: 0;
       border-width: 0px 6px 6px 0px;
       border-style: solid;
       border-color: $white;
       border-bottom-color: transparent;
     }
-    a.delete-btn {
+    a.delete-btn:active {
       /*ボタンを押したとき*/
       border:none;
       -webkit-transform: translate(6px,6px);
       transform: translate(6px,6px);
     }
-    a.delete-btn:after, a.delete-btn:active:before {
+    a.delete-btn:active:after, a.delete-btn:active:before {
       content: none;/*ボタンを押すと線が消える*/
     }
   }
