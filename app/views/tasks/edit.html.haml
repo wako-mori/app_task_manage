@@ -2,4 +2,4 @@
   = render "side_bar"
   = form_for @task, url: group_task_path do |f|
     = f.hidden_field :id
-    = render partial: "new_main", locals: {f: f}
+    = render partial: "new_main", locals: {f: f, edit_flag: true}

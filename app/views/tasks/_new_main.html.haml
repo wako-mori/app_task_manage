@@ -26,14 +26,13 @@
     .new__disply--execution--title
       完了チェック
       = check_box :task, :execution, {class: "check_box"}, true, false
-    - if request.path_info = group_task_path
-      .btn
-        .new__disply--commit
-        = f.submit "登録", class:"commit-btn"
-        .new__disply--delete
-        = link_to group_task_path, method: "delete", class: "delete-btn" do
-          削除
+    .btn
+      .new__disply--commit
+      = f.submit "登録", class:"commit-btn"
+    - if local_assigns[:edit_flag].present?
+      .new__disply--delete
+      = link_to group_task_path, method: "delete", class: "delete-btn" do
+        削除
     - else
-      .btn
-        .new__disply--commit
-        = f.submit "登録", class:"commit-btn"
+    
+
