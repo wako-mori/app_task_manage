@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+.wrapper {
+  background-color: $white;
+  height: 100vh;
+}
 .side {
   height: 100%;
   width: 300px;
