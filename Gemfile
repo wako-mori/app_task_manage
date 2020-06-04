@@ -64,3 +64,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'pry-rails'
 gem 'rails-i18n', '~> 5.1'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
