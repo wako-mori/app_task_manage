@@ -15,5 +15,6 @@ module AppTaskManage
       g.test_framework false
     end
     config.i18n.default_locale = :ja
+    config.logger = Logger.new(STDOUT)
   end
 end
